@@ -83,7 +83,7 @@ export default function Home() {
             <div className="flex justify-center">
               <div className="relative h-80 w-80 overflow-hidden rounded-full border-4 border-primary/20">
                 <Image
-                  src="/images/profile.jpg"
+                  src="images/profile.jpg"
                   alt="Samuel De la cruz Lopez"
                   width={320}
                   height={320}
