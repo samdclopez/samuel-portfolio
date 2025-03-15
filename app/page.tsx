@@ -345,7 +345,7 @@ export default function Home() {
                     rel="noopener noreferrer"
                     className="hover:underline"
                   >
-                    samdl8116
+                    samueldclopez
                   </a>
                 </div>
               </CardContent>
