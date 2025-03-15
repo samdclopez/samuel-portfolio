@@ -17,19 +17,19 @@ export default function Home() {
               <span className="font-bold">Samuel De la cruz Lopez</span>
             </Link>
             <nav className="flex items-center space-x-6 text-sm font-medium">
-              <Link href="#about" className="transition-colors hover:text-foreground/80">
+              <Link href="#about" className="nav-link">
                 About
               </Link>
-              <Link href="#experience" className="transition-colors hover:text-foreground/80">
+              <Link href="#experience" className="nav-link">
                 Experience
               </Link>
-              <Link href="#skills" className="transition-colors hover:text-foreground/80">
+              <Link href="#skills" className="nav-link">
                 Skills
               </Link>
-              <Link href="#education" className="transition-colors hover:text-foreground/80">
+              <Link href="#education" className="nav-link">
                 Education
               </Link>
-              <Link href="#contact" className="transition-colors hover:text-foreground/80">
+              <Link href="#contact" className="nav-link">
                 Contact
               </Link>
             </nav>
@@ -42,9 +42,9 @@ export default function Home() {
         <section id="about" className="py-10 md:py-16">
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2 items-center">
             <div>
-              <h1 className="text-4xl font-bold tracking-tight">Samuel De la cruz Lopez</h1>
-              <h2 className="mt-2 text-2xl text-muted-foreground">Software Developer .NET</h2>
-              <p className="mt-4 text-lg text-muted-foreground">Villahermosa, TAB</p>
+              <h1 className="text-4xl font-bold tracking-tight gradient-text">Samuel De la cruz Lopez</h1>
+              <h2 className="mt-2 text-2xl font-semibold text-secondary">Software Developer .NET</h2>
+              <p className="mt-4 text-lg text-foreground opacity-80">Villahermosa, TAB</p>
               <div className="mt-6 flex flex-col sm:flex-row gap-4">
                 <Button asChild>
                   <Link href="#contact">Contact Me</Link>
@@ -54,13 +54,13 @@ export default function Home() {
                 </Button>
               </div>
               <div className="mt-6 flex items-center gap-4">
-                <Link href="https://github.com/samueldclopez" target="_blank" rel="noopener noreferrer">
+                <Link href="https://github.com/samdclopez" target="_blank" rel="noopener noreferrer">
                   <Button variant="ghost" size="icon">
                     <Github className="h-5 w-5" />
                     <span className="sr-only">GitHub</span>
                   </Button>
                 </Link>
-                <Link href="https://linkedin.com/in/samdl8116" target="_blank" rel="noopener noreferrer">
+                <Link href="https://linkedin.com/in/samueldclopez" target="_blank" rel="noopener noreferrer">
                   <Button variant="ghost" size="icon">
                     <Linkedin className="h-5 w-5" />
                     <span className="sr-only">LinkedIn</span>
@@ -83,11 +83,13 @@ export default function Home() {
             <div className="flex justify-center">
               <div className="relative h-80 w-80 overflow-hidden rounded-full border-4 border-primary/20">
                 <Image
-                  src="/placeholder.svg?height=320&width=320"
+                  src="/images/profile.jpg"
                   alt="Samuel De la cruz Lopez"
-                  fill
+                  width={320}
+                  height={320}
                   className="object-cover"
                   priority
+                  sizes="(max-width: 768px) 100vw, 320px"
                 />
               </div>
             </div>
@@ -96,10 +98,10 @@ export default function Home() {
 
         {/* Professional Summary */}
         <section className="py-10">
-          <h2 className="text-3xl font-bold mb-6">Professional Summary</h2>
+          <h2 className="section-title">Professional Summary</h2>
           <Card>
             <CardContent className="pt-6">
-              <p className="text-muted-foreground leading-7">
+              <p className="text-foreground leading-7">
                 .NET Developer with over 8 years of experience, specialized in .NET Core, .NET Framework, and ASP.NET
                 Web Forms. Competence in backend system development, RESTful APIs, and handling databases with SQL
                 Server. Background in industries such as finance, pharmaceuticals, oil and gas, and retail. Currently
@@ -112,7 +114,7 @@ export default function Home() {
 
         {/* Skills Section */}
         <section id="skills" className="py-10">
-          <h2 className="text-3xl font-bold mb-6">Technical Skills</h2>
+          <h2 className="section-title">Technical Skills</h2>
           <Tabs defaultValue="languages" className="w-full">
             <TabsList className="grid w-full grid-cols-2 md:grid-cols-5">
               <TabsTrigger value="languages">Languages</TabsTrigger>
@@ -205,7 +207,7 @@ export default function Home() {
 
         {/* Experience Section */}
         <section id="experience" className="py-10">
-          <h2 className="text-3xl font-bold mb-6">Professional Experience</h2>
+          <h2 className="section-title">Professional Experience</h2>
           <div className="space-y-6">
             <ExperienceCard
               company="Capgemini Engineering"
@@ -289,7 +291,7 @@ export default function Home() {
 
         {/* Education Section */}
         <section id="education" className="py-10">
-          <h2 className="text-3xl font-bold mb-6">Education</h2>
+          <h2 className="section-title">Education</h2>
           <Card>
             <CardHeader>
               <CardTitle>Universidad del Valle de Mexico</CardTitle>
@@ -304,9 +306,9 @@ export default function Home() {
 
         {/* Contact Section */}
         <section id="contact" className="py-10">
-          <h2 className="text-3xl font-bold mb-6">Contact Me</h2>
+          <h2 className="section-title">Contact Me</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <Card>
+            <Card className="card-hover">
               <CardHeader>
                 <CardTitle>Contact Information</CardTitle>
                 <CardDescription>Feel free to reach out through any of these channels</CardDescription>
@@ -327,18 +329,18 @@ export default function Home() {
                 <div className="flex items-center gap-3">
                   <Github className="h-5 w-5 text-muted-foreground" />
                   <a
-                    href="https://github.com/samueldclopez"
+                    href="https://github.com/samdclopez"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="hover:underline"
                   >
-                    samueldclopez
+                    samdclopez
                   </a>
                 </div>
                 <div className="flex items-center gap-3">
                   <Linkedin className="h-5 w-5 text-muted-foreground" />
                   <a
-                    href="https://linkedin.com/in/samdl8116"
+                    href="https://linkedin.com/in/samueldclopez"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="hover:underline"
@@ -348,61 +350,7 @@ export default function Home() {
                 </div>
               </CardContent>
             </Card>
-            <Card>
-              <CardHeader>
-                <CardTitle>Send Me a Message</CardTitle>
-                <CardDescription>I'll get back to you as soon as possible</CardDescription>
-              </CardHeader>
-              <CardContent>
-                <form className="space-y-4">
-                  <div className="grid grid-cols-1 gap-4">
-                    <div className="space-y-2">
-                      <label
-                        htmlFor="name"
-                        className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-                      >
-                        Name
-                      </label>
-                      <input
-                        id="name"
-                        className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
-                        placeholder="Your name"
-                      />
-                    </div>
-                    <div className="space-y-2">
-                      <label
-                        htmlFor="email"
-                        className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-                      >
-                        Email
-                      </label>
-                      <input
-                        id="email"
-                        type="email"
-                        className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
-                        placeholder="Your email"
-                      />
-                    </div>
-                    <div className="space-y-2">
-                      <label
-                        htmlFor="message"
-                        className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-                      >
-                        Message
-                      </label>
-                      <textarea
-                        id="message"
-                        className="flex min-h-[120px] w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
-                        placeholder="Your message"
-                      ></textarea>
-                    </div>
-                  </div>
-                  <Button type="submit" className="w-full">
-                    Send Message
-                  </Button>
-                </form>
-              </CardContent>
-            </Card>
+            
           </div>
         </section>
       </main>
@@ -414,13 +362,13 @@ export default function Home() {
             &copy; {new Date().getFullYear()} Samuel De la cruz Lopez. All rights reserved.
           </p>
           <div className="flex items-center gap-4">
-            <Link href="https://github.com/samueldclopez" target="_blank" rel="noopener noreferrer">
+            <Link href="https://github.com/samdclopez" target="_blank" rel="noopener noreferrer">
               <Button variant="ghost" size="icon">
                 <Github className="h-5 w-5" />
                 <span className="sr-only">GitHub</span>
               </Button>
             </Link>
-            <Link href="https://linkedin.com/in/samdl8116" target="_blank" rel="noopener noreferrer">
+            <Link href="https://linkedin.com/in/samueldclopez" target="_blank" rel="noopener noreferrer">
               <Button variant="ghost" size="icon">
                 <Linkedin className="h-5 w-5" />
                 <span className="sr-only">LinkedIn</span>
@@ -444,7 +392,7 @@ interface ExperienceCardProps {
 
 function ExperienceCard({ company, position, period, location, responsibilities, technologies }: ExperienceCardProps) {
   return (
-    <Card>
+    <Card className="card-hover">
       <CardHeader>
         <div className="flex flex-col md:flex-row md:justify-between md:items-center gap-2">
           <div>
@@ -463,7 +411,7 @@ function ExperienceCard({ company, position, period, location, responsibilities,
             <h4 className="font-medium mb-2">Responsibilities:</h4>
             <ul className="list-disc pl-5 space-y-1">
               {responsibilities.map((responsibility, index) => (
-                <li key={index} className="text-muted-foreground">
+                <li key={index} className="text-foreground opacity-90">
                   {responsibility}
                 </li>
               ))}
